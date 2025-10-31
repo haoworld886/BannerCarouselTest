@@ -48,16 +48,6 @@
 			path = BannerCarouselTest;
 			sourceTree = "<group>";
 		};
-		92A77F022EB3159900FFFE07 /* BannerCarouselTestTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = BannerCarouselTestTests;
-			sourceTree = "<group>";
-		};
-		92A77F0C2EB3159900FFFE07 /* BannerCarouselTestUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = BannerCarouselTestUITests;
-			sourceTree = "<group>";
-		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,8 +79,6 @@
 			isa = PBXGroup;
 			children = (
 				92A77EEB2EB3159800FFFE07 /* BannerCarouselTest */,
-				92A77F022EB3159900FFFE07 /* BannerCarouselTestTests */,
-				92A77F0C2EB3159900FFFE07 /* BannerCarouselTestUITests */,
 				92A77EEA2EB3159800FFFE07 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -143,9 +131,6 @@
 			dependencies = (
 				92A77F012EB3159900FFFE07 /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				92A77F022EB3159900FFFE07 /* BannerCarouselTestTests */,
-			);
 			name = BannerCarouselTestTests;
 			packageProductDependencies = (
 			);
@@ -165,9 +150,6 @@
 			);
 			dependencies = (
 				92A77F0B2EB3159900FFFE07 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				92A77F0C2EB3159900FFFE07 /* BannerCarouselTestUITests */,
 			);
 			name = BannerCarouselTestUITests;
 			packageProductDependencies = (
