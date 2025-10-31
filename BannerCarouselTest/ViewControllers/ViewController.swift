@@ -17,20 +17,7 @@ class ViewController: UIViewController {
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
-    
-    /// 狀態標籤（用於顯示載入狀態或錯誤訊息）
-//    private let statusLabel: UILabel = {
-//        let label = UILabel()
-//        label.text = "載入中..."
-//        label.textColor = .systemGray
-//        label.font = UIFont.systemFont(ofSize: 16)
-//        label.textAlignment = .center
-//        label.numberOfLines = 0
-//        label.isHidden = true
-//        label.translatesAutoresizingMaskIntoConstraints = false
-//        return label
-//    }()
-    
+
     // MARK: - 生命週期
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -80,12 +67,7 @@ private extension ViewController {
             bannerCarouselView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             bannerCarouselView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             heightConstraint, // 使用優先級較低的高度約束
-            
-            // 狀態標籤約束
-//            statusLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-//            statusLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-//            statusLabel.leadingAnchor.constraint(greaterThanOrEqualTo: view.leadingAnchor, constant: 20),
-//            statusLabel.trailingAnchor.constraint(lessThanOrEqualTo: view.trailingAnchor, constant: -20)
+
         ])
     }
 }
@@ -95,29 +77,9 @@ private extension ViewController {
     
     /// 載入 Banner 資料
     func loadBannerData() {
-        //showLoadingStatus()
     
-            self.bannerCarouselView.loadBannerData()
+        self.bannerCarouselView.loadBannerData()
           
-    }
-}
-
-// MARK: - 使用者互動
-private extension ViewController {
-    
-    /// 重新載入按鈕點擊事件
-    @objc func reloadButtonTapped() {
-        // 停止當前的輪播
-        bannerCarouselView.stopAutoScroll()
-        
-        // 提供觸覺回饋
-        if #available(iOS 10.0, *) {
-            let impactFeedback = UIImpactFeedbackGenerator(style: .light)
-            impactFeedback.impactOccurred()
-        }
-        
-        // 重新載入資料
-        loadBannerData()
     }
 }
 

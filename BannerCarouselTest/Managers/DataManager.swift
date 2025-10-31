@@ -51,15 +51,6 @@ class DataManager: DataManagerProtocol {
     
     /// 私有初始化，確保單例使用
     private init() {}
-    
-    // MARK: - 現代 async/await API
-    
-    /// 異步載入 Banner 資料（現代 API）
-    /// - Returns: Banner 資料
-    /// - Throws: DataError
-    func loadBannerData() async throws -> BannerData {
-        return try await loadBannerDataAsync()
-    }
         
     /// 從本地 JSON 檔案載入 Banner 資料
     /// - Parameter completion: 完成回調
